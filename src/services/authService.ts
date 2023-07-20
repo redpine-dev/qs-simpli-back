@@ -51,7 +51,6 @@ class AuthService {
             _id: Types.ObjectId;
           }
       );
-      console.log(userData, "data en autenticate");
       return {
         success: true,
         data: {
