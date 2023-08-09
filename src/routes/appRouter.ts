@@ -7,7 +7,7 @@ const routeEndpoints = () => {
   const router = Router();
 
   router.use("/auth", AuthRouter());
-  router.use("excel", Auth, ExcelRouter());
+  router.use("/excel", Auth, ExcelRouter());
 
   return router;
 };
