@@ -5,6 +5,7 @@ interface Trip {
   reference: string;
   status: string;
   comments: string;
+  date: Date;
 }
 
 const ExcelRouter = () => {
@@ -37,7 +38,7 @@ const ExcelRouter = () => {
 
           const data = {
             checkout_comment: trip.comments || "",
-            checkout_time: new Date(Date.now()),
+            checkout_time: new Date(trip.date).toISOString(),
             status: trip.status,
             visits: arrayToSend,
             checkout_latitude: "-33.463481",
